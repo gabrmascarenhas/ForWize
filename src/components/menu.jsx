@@ -27,6 +27,10 @@ const Menu = () => {
 
             <Link to="/profile" onClick={fecharMenu}>Perfil</Link>
           </li>
+          <li>
+
+            <Link to="/login" onClick={fecharMenu}>Login</Link>
+          </li>
         </ul>
       </nav>
     </>
