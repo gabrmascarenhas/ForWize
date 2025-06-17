@@ -27,17 +27,15 @@ function App() {
             <Servicos />
             <Trabalhos />
             <Contato />
-            {/* <Login />
-            <Register />
-            <RecuperarSenha /> */}
+            
             
           </>
         } />
         <Route path="/profile" element={<Profile />} />
-        {/* <Route path="/" element={<Navigate to="/login" />} /> */}
-        {/* <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/recover-password" element={<RecuperarSenha />} /> */}
+        <Route path="/recover-password" element={<RecuperarSenha />} />
       </Routes>
     </>
   );

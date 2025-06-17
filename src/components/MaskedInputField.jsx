@@ -1,5 +1,6 @@
 // components/MaskedInputField.jsx
-import InputMask from "react-input-mask";
+import React from 'react';
+import { IMaskInput } from 'react-imask'; // Importe IMaskInput
 
 const MaskedInputField = ({
   label,
@@ -9,19 +10,26 @@ const MaskedInputField = ({
   placeholder,
   mask,
   type = "text",
+  disabled = false,
+  ...rest // Captura quaisquer outras props
 }) => {
   return (
     <div className="input-wrapper">
       {label && <label htmlFor={name}>{label}</label>}
-      <InputMask
+      <IMaskInput // Use IMaskInput aqui
         mask={mask}
         value={value}
-        onChange={onChange}
+        onAccept={(value, mask) => onChange({ target: { name, value } })} // react-imask usa onAccept
+        // onAccept é chamado quando o valor mascarado muda.
+        // Adaptamos para o formato de evento que onChange espera (similar a um evento de input nativo)
+        
         id={name}
         name={name}
-      >
-        {(inputProps) => <input {...inputProps} type={type} placeholder={placeholder} />}
-      </InputMask>
+        type={type}
+        placeholder={placeholder}
+        disabled={disabled}
+        {...rest} // Passe quaisquer outras props diretamente para o IMaskInput
+      />
     </div>
   );
 };
