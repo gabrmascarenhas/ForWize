@@ -1,7 +1,5 @@
-
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
-; // se o nome real for esse
-
 
 const Menu = () => {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -11,13 +9,13 @@ const Menu = () => {
 
   return (
     <>
-  <div class="menu-topo">
-  <button class="botao-menu" onClick={abrirMenu}>☰</button>
-  <a href="#inicio" class="logo-topo">Para Wize</a>
-</div>
+      <div className="menu-topo">
+        <button className="botao-menu" onClick={abrirMenu}>☰</button>
+        <a href="#inicio" className="logo-topo">Para Wize</a>
+      </div>
 
-<nav id="sidebar" className={`sidebar ${menuAberto ? "show" : ""}`}>
-  <button className="botao-fechar" onClick={fecharMenu}>✖</button>
+      <nav id="sidebar" className={`sidebar ${menuAberto ? "show" : ""}`}>
+        <button className="botao-fechar" onClick={fecharMenu}>✖</button>
 
         <ul>
           <li><a href="#inicio" onClick={fecharMenu}>Início</a></li>
@@ -25,7 +23,10 @@ const Menu = () => {
           <li><a href="#o-que-fazemos" onClick={fecharMenu}>O que Fazemos</a></li>
           <li><a href="#nossos-trabalhos" onClick={fecharMenu}>Nossos Trabalhos</a></li>
           <li><a href="#contato" onClick={fecharMenu}>Contato</a></li>
+          <li>
 
+            <Link to="/profile" onClick={fecharMenu}>Perfil</Link>
+          </li>
         </ul>
       </nav>
     </>
