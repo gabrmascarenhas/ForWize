@@ -23,6 +23,7 @@ function App() {
             <Servicos />
             <Trabalhos />
             <Contato />
+            
           </>
         } />
         <Route path="/profile" element={<Profile />} />
