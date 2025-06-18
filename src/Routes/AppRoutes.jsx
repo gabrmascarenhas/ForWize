@@ -5,11 +5,11 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/profile" element={<Profile />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/recover-password" element={<RecuperarSenha />} />
-      <Route path="/*" element={<NotFound />} /> */}
+      <Route path="/*" element={<NotFound />} />
     </Routes>
   );
 };
