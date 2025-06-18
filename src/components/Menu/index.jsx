@@ -14,7 +14,7 @@ const Navbar = () => {
   const irParaLogin = () => {
     navigate("/login");
   };
-
+    
   return (
     <>
       <header className="menu-topo">
@@ -23,6 +23,7 @@ const Navbar = () => {
         </button>
         {/* Botão */}
         <button className="login-btn" onClick={irParaLogin}>Login</button>
+      
       </header>
 
       <nav className={`sidebar ${isSidebarOpen ? "show" : ""}`}>

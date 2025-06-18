@@ -1,30 +1,16 @@
-// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-// import Login from "./Pages/Login/index.jsx";
-// import Register from "../src/pages/Register/Register.jsx";
-// import RecuperarSenha from "./pages/Recover/Recover.jsx";
+import { BrowserRouter } from 'react-router-dom';
+import './styles/LandingPage.css'; // Keep global styles here if they apply to the whole app
+import AppRoutes from './Routes/AppRoutes';
 
 
+function App() {
+  return (
 
-// function App() {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         {/* Redireciona "/" para "/login" */}
-//         <Route path="/" element={<Navigate to="/login" />} />
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
 
-//         {/* Página de login */}
-//         <Route path="/login" element={<Login />} />
+   );
+}
 
-//         {/* Aqui você poderá adicionar outras rotas futuramente, como: */}
-//         <Route path="/register" element={<Register />} />
-//       </Routes>
-
-//       <Routes>
-//       {/* ...outras rotas */}
-//         <Route path="/recover-password" element={<RecuperarSenha />} />
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
-
-// export default App;
+export default App;

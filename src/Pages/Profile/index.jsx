@@ -8,6 +8,7 @@ export default function Profile() {
         <>
         <Menu2 />
         
+        <h1>PERFIL</h1>
         </>
     );
 }
