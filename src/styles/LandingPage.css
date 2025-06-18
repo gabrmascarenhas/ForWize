@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
 *{
-  font-family:'Poppins', 'sans-serif'
+  font-family:'Poppins', 'sans-serif';
 }
 
-/* Zerar margem/padding do body e html */
+
 body, html {
   margin: 0;
   padding: 0;
-  background: #000; /* cor de fundo escura para evitar branco */
+  background: #000; 
 }
 
 /* Hero com vídeo */
@@ -456,5 +456,3 @@ body, html {
 .contato-item a:hover {
   color: #2BBBC0;
 }
-
-

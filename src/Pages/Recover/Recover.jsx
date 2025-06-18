@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import "../../../src/index.css";  // importa os estilos globais se precisar
 import "../Recover/Recover.jsx"; // crie esse css ou copie do login
-
+import Menu2 from '../../components/Menu2'; 
 
 const RecuperarSenha = () => {
   const [email, setEmail] = useState("");
@@ -13,6 +13,8 @@ const RecuperarSenha = () => {
   };
 
   return (
+    <>
+    <Menu2 />
     <div className="recover-container">
       <h2 className="form-title">Recuperar Senha</h2>
       <p className="info-text">Informe o e-mail cadastrado para enviarmos um link de recuperação.</p>
@@ -33,6 +35,7 @@ const RecuperarSenha = () => {
         Lembrou sua senha? <a href="/login" className="signup-link">Voltar ao login</a>
       </p>
     </div>
+    </>
   );
 };
 

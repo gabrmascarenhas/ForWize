@@ -1,0 +1,62 @@
+.sobre-forwize {
+  background-image: url('/src/assets/imagdefundo/sessaosobre.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  color: #1D3F70;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.sobre-texto {
+  flex: 1 1 50%;
+}
+
+.sobre-texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2BBBC0;
+}
+
+.sobre-texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.sobre-imagem {
+  flex: 1 1 40%;
+}
+
+.sobre-imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-texto h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-texto,
+  .sobre-imagem {
+    max-width: 100%;
+  }
+}

@@ -61,7 +61,7 @@
 // };
 
 // export default Register;
-
+import Menu2 from '../../components/Menu2'; 
 import useForm from "../../hooks/useForms.js";
 import { useState } from "react";
 import InputField from "../../components/InputField";
@@ -86,6 +86,8 @@ const Register = () => {
   );
 
   return (
+    <>
+    <Menu2 />
     <div className="register-container">
       <h2 className="form-title">Crie sua conta</h2>
 
@@ -167,6 +169,7 @@ const Register = () => {
         </a>
       </p>
     </div>
+    </>
   );
 };
 

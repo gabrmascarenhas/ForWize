@@ -1,0 +1,49 @@
+.servicos {
+  background: #2BBBC0;
+  padding: 80px 20px;
+  color: #1D3F70;
+}
+
+.container-servicos {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-servicos h2 {
+  font-size: 2.5rem;
+  color: #dee6e7;
+  margin-bottom: 40px;
+}
+
+.servicos-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card-servico {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  width: 260px;
+  transition: transform 0.3s ease;
+}
+
+.card-servico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(43, 187, 192, 0.15);
+}
+
+.card-servico h3 {
+  font-size: 1.3rem;
+  color: #1D3F70;
+  margin-bottom: 10px;
+}
+
+.card-servico p {
+  font-size: 1rem;
+  color: #333;
+}

@@ -1,0 +1,46 @@
+/* Hero com vídeo */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video,
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-bg {
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+.logo-hero {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  width: 400px;
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+
+
+
+
+.frase-hero {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
