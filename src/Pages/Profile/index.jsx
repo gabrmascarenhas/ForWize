@@ -12,12 +12,12 @@ export default function Profile() {
 
   return (
     <>
-      <Menu2 /> {/* Renderiza o componente Menu2 */}
+      <Menu2 /> 
 
       {/* Removido o <body> */}
 
       {/* Botão para abrir/fechar a sidebar */}
-      <button className="open-menu" id="menu-icon" onClick={toggleMenu}>☰</button>
+      {/* <button className="open-menu" id="menu-icon" onClick={toggleMenu}>☰</button> */}
 
       {/* Sidebar - Controlada pelo estado isSidebarOpen */}
       <div className={`sidebar ${isSidebarOpen ? "show" : ""}`} id="sidebar">
