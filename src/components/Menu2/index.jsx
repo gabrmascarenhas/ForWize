@@ -11,8 +11,8 @@ const Navbar = () => {
     setIsSidebarOpen((prev) => !prev); // alterna entre abrir e fechar
   };
 
-  const irParaLogin = () => {
-    navigate("/login");
+  const irParaHome = () => {
+    navigate("/");
   };
 
   return (
@@ -22,7 +22,7 @@ const Navbar = () => {
           {isSidebarOpen ? "✕" : "☰"}
         </button>
         {/* Botão */}
-        <button className="login-btn" onClick={irParaLogin}>Home</button>
+        <button className="login-btn" onClick={irParaHome}>Home</button>
       </header>
 
       <nav className={`sidebar ${isSidebarOpen ? "show" : ""}`}>

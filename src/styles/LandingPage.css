@@ -1,30 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
+/* Regras CSS Globais */
 *{
   font-family:'Poppins', 'sans-serif';
+  box-sizing: border-box; /* Aplica box-sizing globalmente para evitar problemas de layout */
 }
-
 
 body, html {
   margin: 0;
   padding: 0;
   background: #000; 
-}
-
-/* Hero com vídeo */
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.hero video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* Menu fixo transparente */
@@ -34,15 +19,16 @@ body, html {
   left: 0;
   width: 100%;
   z-index: 10001;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Torna o container flexível */
+  align-items: center; /* Alinha itens verticalmente ao centro */
+  justify-content: space-between; /* Empurra o primeiro item para a esquerda e o último para a direita */
   padding: 1rem 1.5rem;
-  background: transparent;
+  background: rgba(183, 167, 142, 0.5); /* Fundo com transparência e blur */
   color: #fff;
+  /* backdrop-filter: blur(6px); Efeito de desfoque */
 }
 
-/* Botão ☰ */
+/* Botão de menu (hambúrguer/X) - SEM POSICIONAMENTO ABSOLUTO/FIXO */
 .botao-menu {
   background: rgba(0, 0, 0, 0.5);
   border: none;
@@ -51,6 +37,7 @@ body, html {
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   cursor: pointer;
+  /* Removidas propriedades de position: fixed/absolute, top, left, z-index */
 }
 
 /* Login button */
@@ -63,11 +50,6 @@ body, html {
   cursor: pointer;
 }
 
-/* Evita que qualquer outro item cause faixa branca */
-* {
-  box-sizing: border-box;
-}
-
 /* Sidebar */
 .sidebar {
   position: fixed;
@@ -75,19 +57,20 @@ body, html {
   left: 0;
   width: 260px;
   height: 100vh;
-  background-color: rgba(32, 33, 35, 0.95);
+  background-color: rgba(32, 33, 35, 0.95); /* parecido com o do ChatGPT */
   color: #fff;
   padding: 1rem;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
-  z-index: 10000;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 10000; /* sobrepõe o vídeo */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Uma das versões do shadow */
 }
 
 .sidebar.show {
   transform: translateX(0);
 }
 
+/* Botão de Fechar Sidebar */
 .botao-fechar {
   background: none;
   border: none;
@@ -97,6 +80,7 @@ body, html {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  z-index: 10001; /* Garante que fique acima da sidebar */
 }
 
 .sidebar ul {
@@ -115,77 +99,9 @@ body, html {
 .sidebar ul li a:hover {
   color: #00ffff;
 }
-  /* -- Menu lateral -- */
 
-  .menu-toggle {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    font-size: 1.4rem;
-    background: #dbdde1 (0, 0, 0, 0.05);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 6px 10px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .menu-toggle:hover {
-    background: rgba(147, 180, 184, 0);
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 260px;
-  background-color: rgba(32, 33, 35, 0.95); /* parecido com o do ChatGPT */
-  color: #fff;
-  padding: 1rem;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  z-index: 10000; /* sobrepõe o vídeo */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.sidebar.show {
-  transform: translateX(0);
-}
-
-.botao-fechar {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 10001;
-}
-
-.botao-menu {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 10001;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  font-size: 1.5rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-  
-  /* -- Hero com video de fundo -- */
-
- .hero {
+/* Hero com vídeo de fundo */
+.hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -215,12 +131,12 @@ body, html {
   position: relative;
   z-index: 1; /* 🔥 Faz a logo e frase ficarem NA FRENTE do vídeo */
   text-align: center;
-  color: white
+  color: white;
 }
 
 .logo-hero {
- position: sticky;
- top: 20px;
+  position: sticky; /* ou absolute, dependendo do que você realmente quer */
+  top: 20px;
   width: 400px;
   max-width: 90%;
   margin-bottom: 20px;
@@ -232,9 +148,9 @@ body, html {
   margin: 0;
 }
 
- /* ---- Pag Sobre -- */
+/* ---- Pag Sobre -- */
 
- .sobre-forwize {
+.sobre-forwize {
   background-image: url('/public/imagdefundo/sessaosobre.jpg');
   background-size: cover;
   background-position: center;
@@ -282,7 +198,6 @@ body, html {
 }
 
 /* Responsividade */
-
 @media (max-width: 768px) {
   .sobre-container {
     flex-direction: column;
@@ -299,7 +214,6 @@ body, html {
 }
 
 /* -- Serviços -- */
-
 .servicos {
   background: #2BBBC0; 
   padding: 80px 20px;
