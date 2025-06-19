@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import "../../../src/index.css";  // importa os estilos globais se precisar
-import "../Recover/Recover.jsx"; // crie esse css ou copie do login
-import Menu2 from '../../components/Menu2'; 
+import "./Recover.css"; // crie esse css ou copie do login
+import Menu2 from '../../components/Menu2/index.jsx'; 
 
 const RecuperarSenha = () => {
   const [email, setEmail] = useState("");
