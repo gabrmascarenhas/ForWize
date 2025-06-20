@@ -27,8 +27,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <h1>Frontend React</h1> {/* <--- TEXTO PARA DEPURAR */}
-      <p>{backendMessage}</p> {/* <--- EXIBIÇÃO DA MENSAGEM */}
+      {/* <h1>Frontend React</h1> {/* <--- TEXTO PARA DEPURAR */}
+      {/* <p>{backendMessage}</p> <--- EXIBIÇÃO DA MENSAGEM */} 
       <AppRoutes />
     </BrowserRouter>
   );
