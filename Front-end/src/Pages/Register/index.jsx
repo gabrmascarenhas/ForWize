@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom"; // Importe Link para navegação
 import useForm from "../../hooks/useForms.js"; // Seu hook customizado
-import InputField from "../../components/InputField"; // Componente de Input padrão
-import MaskedInputField from "../../components/MaskedInputField"; // Componente de Input mascarado
+import InputField from "../../components/addonsLogin/InputField.jsx"; // Componente de Input padrão
+import MaskedInputField from "../../components/MaskedInputField.jsx"; // Componente de Input mascarado
 import Menu2 from '../../components/Menu2'; // Seu componente de Menu2
 import "../Register/Register.css"; // CSS específico para esta página
 

@@ -17,7 +17,7 @@ const Contato = () => {
         <div className="contato-grid">
           <div className="contato-item">
          
-            <img src="/assets/icons/whatsapp.png" alt="WhatsApp" />
+            {/* <img src="/assets/icons/whatsapp.png" alt="WhatsApp" /> */}
             <a href="https://wa.me/seunumerodowhatsapp" target="_blank" rel="noopener noreferrer">
               WhatsApp
             </a>
@@ -25,7 +25,7 @@ const Contato = () => {
 
           <div className="contato-item">
           
-            <img src="/assets/icons/email.png" alt="E-mail" />
+            {/* <img src="/assets/icons/email.png" alt="E-mail" /> */}
             <a href="mailto:contato@forwize.com.br">
               E-mail
             </a>
@@ -33,7 +33,7 @@ const Contato = () => {
 
           <div className="contato-item">
          
-            <img src="/assets/icons/phone.png" alt="Telefone" />
+            {/* <img src="/assets/icons/phone.png" alt="Telefone" /> */}
             <a href="tel:+5511999999999">
               Telefone
             </a>
@@ -41,7 +41,7 @@ const Contato = () => {
 
           <div className="contato-item">
            
-            <img src="/assets/icons/instagram.png" alt="Instagram" />
+            {/* <img src="/assets/icons/instagram.png" alt="Instagram" /> */}
             <a href="https://instagram.com/seuuser" target="_blank" rel="noopener noreferrer">
               Instagram
             </a>

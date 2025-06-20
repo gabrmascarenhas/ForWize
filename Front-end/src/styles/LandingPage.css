@@ -2,14 +2,14 @@
 
 /* Regras CSS Globais */
 *{
-  font-family:'Poppins', 'sans-serif';
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box; /* Aplica box-sizing globalmente para evitar problemas de layout */
 }
 
 body, html {
-  margin: 0;
-  padding: 0;
-  background: #000; 
+  width: 100%;
 }
 
 /* Menu fixo transparente */
@@ -23,7 +23,7 @@ body, html {
   align-items: center; /* Alinha itens verticalmente ao centro */
   justify-content: space-between; /* Empurra o primeiro item para a esquerda e o último para a direita */
   padding: 1rem 1.5rem;
-  background: rgba(183, 167, 142, 0.5); /* Fundo com transparência e blur */
+  background: rgba(183, 167, 142, 0.5); /*Fundo com transparência e blur */
   color: #fff;
   /* backdrop-filter: blur(6px); Efeito de desfoque */
 }
@@ -44,10 +44,12 @@ body, html {
 .login-btn {
   background: rgba(138, 109, 109, 0.6); /* transparente escuro */
   color: white;
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  margin-left: auto;
 }
 
 /* Sidebar */
@@ -80,7 +82,7 @@ body, html {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 10001; /* Garante que fique acima da sidebar */
+  z-index: 10001; 
 }
 
 .sidebar ul {
@@ -101,27 +103,34 @@ body, html {
 }
 
 /* Hero com vídeo de fundo */
-.hero {
+ .hero {
   position: relative;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-.hero video {
+ .hero video {
+  all: unset;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  /* z-index: -1; */
   object-fit: cover;
 }
+
+
 
 .video-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   z-index: 0;
   opacity: 0.6;
@@ -135,17 +144,19 @@ body, html {
 }
 
 .logo-hero {
-  position: sticky; /* ou absolute, dependendo do que você realmente quer */
+  position: absolute; /* ou absolute, dependendo do que você realmente quer */
   top: 20px;
   width: 400px;
   max-width: 90%;
   margin-bottom: 20px;
+  margin-top: 15%;
 }
 
 .frase-hero {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 /* ---- Pag Sobre -- */
@@ -210,6 +221,16 @@ body, html {
 
   .sobre-texto, .sobre-imagem {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-servico, .contato-item {
+    width: 90%; /* para melhor visualização em celulares estreitos */
+  }
+
+  .logo-hero {
+    margin-top: 40%;
   }
 }
 

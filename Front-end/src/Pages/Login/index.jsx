@@ -1,47 +1,35 @@
-// ForWize/Front-end/src/Pages/Login/index.jsx
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom"; // Link é para navegação interna
-import SocialLogin from "../../components/SocialLogin.jsx";
-import InputField from "../../components/InputField.jsx"; // Assumindo que você usa este componente
-import Menu2 from '../../components/Menu2'; // Assumindo que você usa este componente
-import "./Login.css"; // Assumindo que Login.css existe aqui
+// import SocialLogin from "../../components/SocialLogin.jsx"; // You uncommented this below
+// import InputField from "../../components/InputField.jsx"; // You uncommented this below
+// import { useState } from "react"; // You uncommented this below
+// import "../../../src/index.css"; // This import path might be wrong for your global CSS.
+                                  // Typically, global CSS like index.css is imported in index.js/main.jsx,
+                                  // or if it's component-specific, it should be relative like './Login.css'
+
+// IMPORTANT: Do NOT uncomment the top section unless you intend to revert to that code.
+// The code you provided is the second (uncommented) block.
+
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom"; // Link is also from react-router-dom
+
+import SocialLogin from "../../components/addonsLogin/SocialLogin.jsx";
+import InputField from "../../components/addonsLogin/InputField.jsx";
+import Menu2 from '../../components/Menu2';
+import "./Login.css"; // Assuming you have a Login.css in the same directory, or adjust path accordingly.
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState(""); // Estado para a senha
-  const [message, setMessage] = useState(""); // Para mensagens de feedback
+  // CORRECT PLACE for useNavigate: INSIDE the functional component
   const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault(); // IMPEDE o comportamento padrão de recarregar a página
-    setMessage(""); // Limpa mensagens anteriores
-
-    try {
-      // Faz a requisição POST para a rota de login do backend
-      const response = await fetch("/api/auth/login", { // Rota '/api/auth/login'
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json", // Importante para informar que o corpo é JSON
-        },
-        body: JSON.stringify({ email, password }), // Envia email e password (convertidos para JSON)
-      });
-
-      const data = await response.json(); // Converte a resposta do backend para JSON
-
-      if (response.ok) { // Se o status HTTP for 2xx (ex: 200 OK)
-        console.log("Login bem-sucedido!", data);
-        setMessage(data.message); // Exibe a mensagem de sucesso do backend
-        localStorage.setItem("token", data.token); // ARMAZENA O TOKEN JWT NO LOCAL STORAGE
-        navigate("/profile"); // Redireciona para a página de perfil
-      } else { // Se o status HTTP for 4xx ou 5xx (erro)
-        console.error("Falha no login:", data);
-        setMessage(data.message || "Erro desconhecido. Verifique suas credenciais.");
-      }
-    } catch (error) { // Erros de rede, servidor offline, etc.
-      console.error("Erro de conexão ou requisição:", error);
-      setMessage("Não foi possível conectar ao servidor. Tente novamente mais tarde.");
-    }
+  // You can define a handler function inside the component if it's more complex,
+  // or use an arrow function directly in onClick.
+  const handleLoginClick = () => {
+    navigate("/profile");
   };
+
+  // const [action, setAction] = useState("Login"); // Uncomment if you need this state
+  // const esqueceuSenha = () => { // Uncomment if you need this function, though you're using <Link> now
+  //   alert("Funcionalidade de recuperação de senha em breve!");
+  // };
 
   return (
     <>
@@ -52,32 +40,22 @@ const Login = () => {
 
         <p className="separator"><span>ou</span></p>
 
-        <form onSubmit={handleSubmit} className="login-form"> {/* CONECTA O SUBMIT */}
-          <InputField
-            type="email"
-            placeholder="Endereço de Email"
-            icon="mail"
-            value={email} // Conecta ao estado 'email'
-            onChange={(e) => setEmail(e.target.value)} // Atualiza o estado
-          />
-          <InputField
-            type="password"
-            placeholder="Senha"
-            icon="lock"
-            value={password} // Conecta ao estado 'password'
-            onChange={(e) => setPassword(e.target.value)} // Atualiza o estado
-          />
+        <form action="#" className="login-form">
+          <InputField type="email" placeholder="Endereço de Email" icon="mail" />
+          <InputField type="password" placeholder="Senha" icon="lock" />
 
+          {/* Aqui você usa a função */}
           <Link to="/recover-password" className="forgot-password-link">Esqueceu a senha?</Link>
 
-          {/* O botão agora é type="submit" e o form tem onSubmit={handleSubmit} */}
-          <button type="submit" className="login-button">Entrar</button>
+          {/* Use the defined handler or an inline arrow function */}
+          <button type="submit" onClick={handleLoginClick} className="login-button">Entrar</button>
+          {/* Or directly: <button type="submit" onClick={() => navigate("/profile")} className="login-button">Entrar</button> */}
         </form>
 
         <p className="signup-prompt">
-          Não tem uma conta? <Link to="/register" className="signup-link">Cadastre-se</Link> {/* Usando Link para navegação */}
+          Não tem uma conta? <a href="/register" className="signup-link">Cadastre-se</a>
         </p>
-        {message && <p style={{ color: message.includes("sucesso") ? "green" : "red", textAlign: "center" }}>{message}</p>}
+
       </div>
     </>
   );

@@ -14,8 +14,8 @@ const NossoTrabalho = () => {
           <img src="/imgs/projeto2.jpg" alt="Projeto 2" />
           <img src="/imgs/projeto3.jpg" alt="Projeto 3" />
           <img src="/imgs/projeto4.jpg" alt="Projeto 4" />
-          <img src="/imgs/projeto5.jpg" alt="Projeto 5" />
-          <img src="/imgs/projeto6.jpg" alt="Projeto 6" />
+          {/* <img src="/imgs/projeto5.jpg" alt="Projeto 5" />
+          <img src="/imgs/projeto6.jpg" alt="Projeto 6" /> */}
         </div>
       </div>
     </section>

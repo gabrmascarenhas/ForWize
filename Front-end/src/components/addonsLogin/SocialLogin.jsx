@@ -4,11 +4,11 @@ const SocialLogin = () => {
   return (
     <div className="social-login">
       <button className="social-button">
-        <img src="google.svg" alt="Google" className="social-icon" />
+        <img src="/assets/icons/goo.png" alt="Google" className="social-icon" />
         Google
       </button>
       <button className="social-button">
-        <img src="github4.svg" alt="Apple" className="social-icon" />
+        <img src="/assets/icons/git.png" alt="Apple" className="social-icon" />
         Github
       </button>
     </div>

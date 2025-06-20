@@ -62,10 +62,10 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="info-card full">
+        <div className="info-card-full">
           <h3>Gerenciador ForWize</h3>
           <iframe title="Gerenciador ForWize" width="100%" height="450" 
-            src="https://app.powerbi.com/view?r=LINK-DO-CLIENTE"
+            src="/imgs/graficos.png"
             frameBorder="0" allowFullScreen></iframe> 
         </div>
       </div>

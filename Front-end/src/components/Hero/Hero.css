@@ -30,10 +30,10 @@
 .logo-hero {
   position: relative;
   top: 40px;
-  left: 40px;
+  left:10px;
   width: 400px;
   max-width: 90%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 
