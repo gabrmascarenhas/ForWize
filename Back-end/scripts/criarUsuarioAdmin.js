@@ -1,6 +1,6 @@
 // scripts/criarUsuarioAdmin.js
 import { PrismaClient } from '@prisma/client';
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt.js';
 
 const prisma = new PrismaClient();
 

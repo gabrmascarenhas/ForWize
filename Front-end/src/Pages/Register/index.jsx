@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom"; // Importe Link para navegação
 import useForm from "../../hooks/useForms.js"; // Seu hook customizado
-import InputField from "../../components/addonsLogin/InputField.jsx"; // Componente de Input padrão
+import InputField from "../../components/InputField.jsx"; // Componente de Input padrão
 import MaskedInputField from "../../components/MaskedInputField.jsx"; // Componente de Input mascarado
 import Menu2 from '../../components/Menu2'; // Seu componente de Menu2
 import "../Register/Register.css"; // CSS específico para esta página
@@ -106,7 +106,7 @@ const Register = () => {
             // Para MaskedInputField, o onChange pode precisar pegar o valor sem máscara se 'handleChange' não o faz
             onChange={(e) => handleChange({ target: { name: e.target.name, value: e.target.value }})}
             placeholder="(00) 00000-0000"
-            mask="(99) 99999-9999"
+            mask="(00) 00000-0000"
           />
           <MaskedInputField
             label="CPF"
@@ -115,7 +115,7 @@ const Register = () => {
             // Adapte onChange para MaskedInputField se o valor retornado não for o esperado (string simples)
             onChange={(e) => handleChange({ target: { name: e.target.name, value: e.target.value }})}
             placeholder="000.000.000-00"
-            mask="999.999.999-99"
+            mask="000.000.000-00"
           />
           <InputField // Mudei para InputField padrão para senhas
             label="Senha"

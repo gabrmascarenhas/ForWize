@@ -1,0 +1,113 @@
+/* Barra horizontal */
+.navbar {
+  background-color: #091742;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-links a:hover {
+  color: #29bec4;
+}
+
+/* Botão hamburguer */
+.botao-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar (menu lateral) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: rgba(32, 33, 35, 0.95);
+  color: #fff;
+  padding: 1rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10000;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.botao-fechar {
+  position: relative;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Lista da sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 4rem;
+}
+
+.sidebar ul li {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.sidebar ul li a:hover {
+  color: #29bec4;
+}
+
+/* Container centralizado (igual ao header) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-links {
+    display: none;
+  }
+
+  .botao-menu {
+    display: block;
+  }
+}

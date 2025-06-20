@@ -5,7 +5,7 @@ import Login from '../Pages/Login';
 import Register from '../Pages/Register';
 import RecuperarSenha from '../Pages/Recover';
 import NotFound from '../Pages/NotFound';
-
+import Assinaturas from "../Pages/Assinaturas/assinaturas.jsx"
 const AppRoutes = () => {
   return (
     <Routes>
@@ -15,6 +15,8 @@ const AppRoutes = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/recover-password" element={<RecuperarSenha />} />
       <Route path="/*" element={<NotFound />} />
+      <Route path="/assinaturas" element={<Assinaturas />} />
+      
     </Routes>
   );
 };

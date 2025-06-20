@@ -32,7 +32,7 @@ const Menu = () => {
           <li><a href="#servicos" onClick={toggleSidebar}>Nossos Serviços</a></li>
           <li><a href="#portfolio" onClick={toggleSidebar}>Nosso Trabalho</a></li>
           <li><a href="#contato" onClick={toggleSidebar}>Contato</a></li>
-          
+          <li><Link to="/assinaturas" onClick={toggleSidebar}>Assinaturas</Link></li>
           {/* AQUI ESTÁ A CORREÇÃO: Removida a tag <a> externa */}
           <li><Link to="/login" onClick={toggleSidebar}>Perfil</Link></li>
           
