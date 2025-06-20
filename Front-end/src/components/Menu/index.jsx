@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../MenuSuperior/Menusuperior.css";
 
-const Navbar = () => {
+const Menu = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -23,16 +23,21 @@ const Navbar = () => {
         </button>
         {/* Botão */}
         <button className="login-btn" onClick={irParaLogin}>Login</button>
-      
       </header>
 
       <nav className={`sidebar ${isSidebarOpen ? "show" : ""}`}>
         <ul>
+          {/* Para links de âncora (#) que rolam a página e também fecham a sidebar */}
           <li><a href="#sobre" onClick={toggleSidebar}>Sobre a ForWize</a></li>
           <li><a href="#servicos" onClick={toggleSidebar}>Nossos Serviços</a></li>
           <li><a href="#portfolio" onClick={toggleSidebar}>Nosso Trabalho</a></li>
           <li><a href="#contato" onClick={toggleSidebar}>Contato</a></li>
-          <li><a> <Link to="/login " onClick={toggleSidebar}>Perfil</Link></a></li>
+          
+          {/* AQUI ESTÁ A CORREÇÃO: Removida a tag <a> externa */}
+          <li><Link to="/login" onClick={toggleSidebar}>Perfil</Link></li>
+          
+          {/* Se você tiver outras Links, como esta, certifique-se de que não há <a> externo: */}
+          {/* <li><Link to="/assinaturas" onClick={toggleSidebar}>Assinaturas</Link></li> */}
           
         </ul>
       </nav>
@@ -40,4 +45,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Menu;
