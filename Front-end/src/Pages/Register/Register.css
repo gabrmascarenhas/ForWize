@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: hwb(0 100% 0%);
+}
+
+.register-container {
+  width: 100%;
+  max-width: 410px;
+  margin: auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #2ebac0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 20px;
+  margin: 20px;
+
+
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #182f5b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="passwords"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-color: #2ebac0;
+  border-radius: 4px;
+} ::placeholder{
+    color: #2ebac0;
+}
+
+.register-container p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.register-container a {
+  color: #3478f6;
+  text-decoration: none;
+}
+
+.register-container a:hover {
+  text-decoration: underline;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1rem;
+} 
+
+.register-button {
+  width: 100%;
+  height: 54px;
+  font-size: 1.20rem;
+  padding: 10px;
+  background-color: #182f5b;
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+:hover.register-button {
+  background-color: #2c6add;
+}
+
+.signup-prompt {
+  text-align: center;
+  font-size: 1.06rem;
+  font-weight: 500;
+  margin: 1.75rem 0 0.31rem;
+} 
+
+.signup-prompt a {
+  color: #2ebac0;
+  font-weight: 500;
+  text-decoration: none;  
+  cursor: pointer;
+} 
+
+/* Corrigir o seletor errado: */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-color: #2ebac0;
+  border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Estilo para a div do checkbox */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.checkbox-wrapper label a {
+  color: #2ebac0;
+  text-decoration: none;
+}
+
+.checkbox-wrapper label a:hover {
+  text-decoration: underline;
+}
+
+.checkbox-wrapper a:hover{
+  color: #182f5b;
+}
+
+
