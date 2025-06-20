@@ -23,7 +23,7 @@ body, html {
   align-items: center; /* Alinha itens verticalmente ao centro */
   justify-content: space-between; /* Empurra o primeiro item para a esquerda e o último para a direita */
   padding: 1rem 1.5rem;
-  background: rgba(183, 167, 142, 0.5); /* Fundo com transparência e blur */
+  background: rgba(183, 167, 142, 0.5); /*Fundo com transparência e blur */
   color: #fff;
   /* backdrop-filter: blur(6px); Efeito de desfoque */
 }
@@ -44,10 +44,12 @@ body, html {
 .login-btn {
   background: rgba(138, 109, 109, 0.6); /* transparente escuro */
   color: white;
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  margin-left: auto;
 }
 
 /* Sidebar */
@@ -80,7 +82,7 @@ body, html {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 10001; /* Garante que fique acima da sidebar */
+  z-index: 10001; 
 }
 
 .sidebar ul {
@@ -140,12 +142,14 @@ body, html {
   width: 400px;
   max-width: 90%;
   margin-bottom: 20px;
+  margin-top: 25%;
 }
 
 .frase-hero {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 /* ---- Pag Sobre -- */

@@ -19,10 +19,10 @@ const MaskedInputField = ({
       <IMaskInput // Use IMaskInput aqui
         mask={mask}
         value={value}
-        onAccept={(value, mask) => onChange({ target: { name, value } })} // react-imask usa onAccept
+        onAccept={(value) => onChange({ target: { name, value } })} // react-imask usa onAccept
         // onAccept é chamado quando o valor mascarado muda.
         // Adaptamos para o formato de evento que onChange espera (similar a um evento de input nativo)
-        
+        overwrite={true}
         id={name}
         name={name}
         type={type}

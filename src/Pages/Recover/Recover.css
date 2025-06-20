@@ -1,13 +1,13 @@
 .recover-container {
   max-width: 400px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: auto;
   padding: 2rem;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   text-align: center;
-  border: solid 1px #09f128;
+  border: solid 1px #2ebac0;
 }
 
 .recover-input {

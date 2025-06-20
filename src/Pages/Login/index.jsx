@@ -11,8 +11,8 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom"; // Link is also from react-router-dom
 
-import SocialLogin from "../../components/SocialLogin.jsx";
-import InputField from "../../components/InputField.jsx";
+import SocialLogin from "../../components/addonsLogin/SocialLogin.jsx";
+import InputField from "../../components/addonsLogin/InputField.jsx";
 import Menu2 from '../../components/Menu2';
 import "./Login.css"; // Assuming you have a Login.css in the same directory, or adjust path accordingly.
 

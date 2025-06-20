@@ -64,8 +64,8 @@
 import Menu2 from '../../components/Menu2'; 
 import useForm from "../../hooks/useForms.js";
 import { useState } from "react";
-import InputField from "../../components/InputField";
-import MaskedInputField from "../../components/MaskedInputField";
+import InputField from "../../components/addonsLogin/InputField.jsx";
+import MaskedInputField from "../../components/addonsLogin/MaskedInputField.jsx";
 import "../Register/Register.css";
 
 
@@ -115,7 +115,7 @@ const Register = () => {
           value={values.telefone}
           onChange={handleChange}
           placeholder="(00) 00000-0000"
-          mask="(99) 99999-9999"
+          mask="(00) 00000-0000"
         />
         <MaskedInputField
           label="CPF"
@@ -123,7 +123,7 @@ const Register = () => {
           value={values.cpf}
           onChange={handleChange}
           placeholder="000.000.000-00"
-          mask="999.999.999-99"
+          mask="000.000.000-00"
         />
         <MaskedInputField
           label="Senha"
