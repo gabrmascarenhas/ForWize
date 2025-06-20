@@ -33,6 +33,7 @@ const Navbar = () => {
           <li><a href="#portfolio" onClick={toggleSidebar}>Nosso Trabalho</a></li>
           <li><a href="#contato" onClick={toggleSidebar}>Contato</a></li>
           <li><a> <Link to="/login " onClick={toggleSidebar}>Perfil</Link></a></li>
+          <li><Link to="/assinaturas">Assinaturas</Link></li>
           
         </ul>
       </nav>

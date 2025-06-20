@@ -1,0 +1,107 @@
+.card-planos {
+    padding-top: 10rem;
+    border: 1px solid #c1bfbf;
+    padding: 10px;
+    margin: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    max-height: auto;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.card-planos:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 1rem 1px rgb(187, 186, 186);
+}
+.card-planos.selecionado {
+    box-shadow: 0 0 1rem 1px rgba(39, 164, 169, 0.625);
+    transform: scale(1.03);
+}
+
+.titulo {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    border: solid 1px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #0c0a39, #1c407d);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.card-planos.highlight .titulo {
+    background: linear-gradient(45deg, #29bec4, #15305f);
+    color: white; 
+}
+
+.preco {
+    font-style: unset;
+    color: #29bec4;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+} 
+.preco-container {
+    color: white;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.servicos {
+    color: #666;
+    white-space: pre-line;
+}
+
+.check-icon-inline {
+    
+    margin-left: 16px;
+    vertical-align: middle;
+    color: #ffffff;
+    position: static;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.card-planos.selecionado .check-icon-inline {
+    opacity: 1;
+    transform: scale(1);
+}
+.check2{
+    color: #29bec4;
+    margin-right: 3px;
+}
+.servicos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 1rem;
+}
+.servico {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+.selo-recomendado{
+    background-color: #29bec4;
+    color: #ffffff;
+    padding: 1px;
+    border-radius:10px;
+    width: 60%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.linha{
+    color: black;
+}

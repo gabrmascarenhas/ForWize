@@ -1,0 +1,44 @@
+.header {
+background-color: #2d4c89;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+ max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 12rem;
+  margin: 0;
+  padding: 0;
+}
+.login-link{
+  list-style: none;
+  font-size: 1rem;
+  display: flex;
+   justify-content: right;
+  align-items: center;
+
+}
+.login-link li {
+  list-style: none;
+}
+.login-link a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 2rem;
+}

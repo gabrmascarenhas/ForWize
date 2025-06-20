@@ -1,0 +1,28 @@
+.container-planos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  margin: 30px;
+  padding-top: 8rem;
+} 
+.title{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+}
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: rgb(251, 249, 247);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+    
