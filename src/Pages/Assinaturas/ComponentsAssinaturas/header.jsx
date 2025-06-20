@@ -11,11 +11,11 @@ function Header() {
                         src={logoForwize}
                         alt="Logo Forwize"
                     />
-                    <ul className="login-link">
+                    {/* <ul className="login-link">
                         <li>
                             <a href="login">Entrar</a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </header>
                 <hr />
