@@ -6,7 +6,7 @@ const dadosPlanos=[
         id: "1",
         titulo: "ForGrow",
         descricao: "Para quem já tem presença online, mas quer crescer com estratégia",
-        preco: "R$30,47/Mês",
+        preco: "R$889,97/Mês",
         servico1: "Site completo ou Landing Page",
         servico2: "Integração com domínio + hospedagem incluída",
         servico3: "E-mail profissional",
@@ -20,7 +20,7 @@ const dadosPlanos=[
         id: "2",
         titulo: "ForPower",
         descricao: "Para quem quer dominar o digital com performance, automação e inteligência de dados",
-        preco: "R$65,47/Mês",
+        preco: "R$1389,97/Mês",
         servico1: "E-commerce ou loja online estruturada",
         servico2: "Gestão completa de redes sociais",
         servico3: "Estratégia mensal com reunião de alinhamento",
@@ -44,7 +44,7 @@ const dadosPlanos=[
         servico4: "Instagram estratégico",
         servico5: "Impulsionamento orientado",
         destaques: false,
-        preco: "R$15,37/Mês",
+        preco: "R$489,97/Mês",
     },
 
 
