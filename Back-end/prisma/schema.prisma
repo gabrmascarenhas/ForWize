@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  senha     String
+  nome      String
+  tipo      String   // 'admin' ou 'cliente'
+  cliente   Cliente? @relation(fields: [clienteId], references: [id])
+clienteId Int?     @unique
+  criadoEm  DateTime @default(now())
+}
+
+model Cliente {
+  id         Int       @id @default(autoincrement())
+  nome       String
+  empresa    String
+  email      String    @unique
+  plano      Plano     @relation(fields: [planoId], references: [id])
+  planoId    Int
+  painel     Painel?
+  contrato   Contrato?
+  criadoEm   DateTime  @default(now())
+  atualizado DateTime  @updatedAt
+  usuario    User?
+}
+
+model Plano {
+  id       Int       @id @default(autoincrement())
+  nome     String    @unique
+  preco    Float
+  descricao String
+  clientes Cliente[]
+}
+
+model Painel {
+  id         Int      @id @default(autoincrement())
+  cliente    Cliente  @relation(fields: [clienteId], references: [id])
+  clienteId  Int      @unique
+  linkBI     String
+  criadoEm   DateTime @default(now())
+}
+
+
+model Contrato {
+  id          Int      @id @default(autoincrement())
+  cliente     Cliente  @relation(fields: [clienteId], references: [id])
+  clienteId   Int      @unique
+  arquivoURL  String
+  criadoEm    DateTime @default(now())
+}
